@@ -9,10 +9,12 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "dependencies": {
-    "amasugar": "^1.2.0",
+  "devDependencies": {
     "nuxt": "^3.17.4",
     "vue": "^3.5.15",
     "vue-router": "^4.5.1"
+  },
+  "dependencies": {
+    "amasugar": "^1.2.0"
   }
 }
