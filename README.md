@@ -1,3 +1,6 @@
+# ネコちゃんカラオケ料金計算方法メモ
+会員ランクボーナスは税込価格に対して割り引かれる
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
