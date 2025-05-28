@@ -1,6 +1,6 @@
 <template>
   <div class="container yellow">
-    <p>部屋料金 <button @click="addRoomPrice">+</button></p>
+    <p>部屋料金(税抜) <button @click="addRoomPrice">+</button></p>
     <ul>
       <li v-for="(room, i) in prices_room">
         <input
@@ -20,7 +20,7 @@
   </div>
 
   <div class="container yellow">
-    <p>注文料金 <button @click="addOrderPrice">+</button></p>
+    <p>注文料金(税抜) <button @click="addOrderPrice">+</button></p>
     <ul>
       <li v-for="(order, i) in prices_order">
         <input
@@ -46,11 +46,11 @@
 
   <div class="container blue">
     <p>
-      合計金額: <span class="big">{{ price_total }}</span
+      合計金額（税込）: <span class="big">{{ price_total }}</span
       >円
     </p>
     <p v-if="0 < price_nokori">
-      1000円まであと <span class="attention">{{ price_nokori }}</span
+      1000円まであと（税抜） <span class="attention">{{ price_nokori }}</span
       >円
     </p>
   </div>
