@@ -59,6 +59,7 @@
 <style lang="css">
 input[type="text"] {
   width: 20%;
+  font-size: 16px;
 }
 .big {
   font-size: 48px;
