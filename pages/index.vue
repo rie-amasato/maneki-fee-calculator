@@ -46,7 +46,7 @@
 
   <div class="container blue">
     <p>
-      合計金額（税込）: <span class="big">{{ price_total }}</span
+      合計金額は（税込） <span class="big">{{ price_total }}</span
       >円
     </p>
     <p v-if="0 < price_nokori">
