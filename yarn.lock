@@ -1423,7 +1423,7 @@
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-21.1.0.tgz#02a7dbba611a8abf1ad2a9e00f72f7b94b5ab0ee"
   integrity sha512-DKuXOKpM5IDT1FA2g9x9x1Ug81YuKrzf4mYX8FAVSNu5Wo/LELHWQyM1pQaDkI42bX15PWl0vNPt1uGiIFUOpg==
 
-"@typescript-eslint/typescript-estree@^8.23.0":
+"@typescript-eslint/typescript-estree@^21.1.0":
   version "21.1.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-21.1.0.tgz#abcc1d3db75a8e9fd2e274ee8c4099fa2399abfd"
   integrity sha512-vegY4FQoB6jL97Tu/lWRsAiUUp8qJTqzAmENH2k59SJhw0Th1oszb9Idq/FyyONLuNqT1OADJPXfyUNOR8SzAQ==
@@ -2463,7 +2463,7 @@ detective-typescript@^14.0.0:
   resolved "https://registry.yarnpkg.com/detective-typescript/-/detective-typescript-14.0.0.tgz#3cf429652eb7d7d2be2c050ac47af957a559527d"
   integrity sha512-pgN43/80MmWVSEi5LUuiVvO/0a9ss5V7fwVfrJ4QzAQRd3cwqU1SfWGXJFcNKUqoD5cS+uIovhw5t/0rSeC5Mw==
   dependencies:
-    "@typescript-eslint/typescript-estree" "^8.23.0"
+    "@typescript-eslint/typescript-estree" "^21.1.0"
     ast-module-types "^6.0.1"
     node-source-walk "^7.0.1"
 
