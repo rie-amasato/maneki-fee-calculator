@@ -1,64 +1,65 @@
 <template>
-  <div class="container red">
-    <div class="container yellow">
-      <p>部屋料金 <button @click="addRoomPrice">+</button></p>
-      <ul>
-        <li v-for="(room, i) in prices_room">
-          <input
-            :value="room['price_unit']"
-            type="text"
-            inputmode="numeric"
-            @input="(e) => change_roomPrice(e, i, 'price_unit')"
-          />円
-          <input
-            :value="room['time_count']"
-            type="text"
-            inputmode="numeric"
-            @input="(e) => change_roomPrice(e, i, 'time_count')"
-          />×30分
-        </li>
-      </ul>
-    </div>
+  <div class="container yellow">
+    <p>部屋料金 <button @click="addRoomPrice">+</button></p>
+    <ul>
+      <li v-for="(room, i) in prices_room">
+        <input
+          :value="room['price_unit']"
+          type="text"
+          inputmode="numeric"
+          @input="(e) => change_roomPrice(e, i, 'price_unit')"
+        />円 ×
+        <input
+          :value="room['time_count']"
+          type="text"
+          inputmode="numeric"
+          @input="(e) => change_roomPrice(e, i, 'time_count')"
+        /> × 30分
+      </li>
+    </ul>
+  </div>
 
-    <div class="container yellow">
-      <p>注文料金 <button @click="addOrderPrice">+</button></p>
-      <ul>
-        <li v-for="(order, i) in prices_order">
-          <input
-            :value="order"
-            type="text"
-            inputmode="numeric"
-            @input="(e) => change_orderPrice(e, i)"
-          />円
-        </li>
-      </ul>
-    </div>
+  <div class="container yellow">
+    <p>注文料金 <button @click="addOrderPrice">+</button></p>
+    <ul>
+      <li v-for="(order, i) in prices_order">
+        <input
+          :value="order"
+          type="text"
+          inputmode="numeric"
+          @input="(e) => change_orderPrice(e, i)"
+        />円
+      </li>
+    </ul>
+  </div>
 
-    <div class="container yellow">
-      <p>
-        会員ランク
-        <select v-model="lank" @change="calcTotalPrice">
-          <option v-for="item in lank_items" :value="item.value">
-            {{ item.label }}
-          </option>
-        </select>
-      </p>
-    </div>
+  <div class="container yellow">
+    <p>
+      会員ランク
+      <select v-model="lank" @change="calcTotalPrice">
+        <option v-for="item in lank_items" :value="item.value">
+          {{ item.label }}
+        </option>
+      </select>
+    </p>
+  </div>
 
-    <div class="container blue">
-      <p>
-        合計金額: <span class="big">{{ price_total }}</span
-        >円
-      </p>
-      <p v-if="0 < price_nokori">
-        1000円まであと <span class="attention">{{ price_nokori }}</span
-        >円
-      </p>
-    </div>
+  <div class="container blue">
+    <p>
+      合計金額: <span class="big">{{ price_total }}</span
+      >円
+    </p>
+    <p v-if="0 < price_nokori">
+      1000円まであと <span class="attention">{{ price_nokori }}</span
+      >円
+    </p>
   </div>
 </template>
 
 <style lang="css">
+input[type="text"] {
+  width: 20%;
+}
 .big {
   font-size: 48px;
 }
