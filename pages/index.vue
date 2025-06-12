@@ -88,7 +88,7 @@ type TRoomPrice = {
 };
 const prices_room = ref<TRoomPrice[]>([{ price_unit: 50, time_count: 5 }]);
 const addRoomPrice = () => {
-  prices_room.value.push({ price_unit: 150, time_count: 1 });
+  prices_room.value.push({ price_unit: 135, time_count: 1 });
   calcTotalPrice();
 };
 const change_roomPrice = (
